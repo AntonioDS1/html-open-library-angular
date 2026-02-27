@@ -19,9 +19,9 @@
     A modern Angular application to search books by category using the Open Library API.
     Built with standalone architecture, reactive state management, and clean UI design.
     <br />
-    <a href="https://antoniods1.github.io/html-open-library-angular"><strong>Visit on GitHub Pages »</strong></a>
+    <a href="https://github.com/AntonioDS1/html-open-library-angular/"><strong>Visit on GitHub »</strong></a>
     <br />
-    <a href="https://YOUR_FIREBASE_PROJECT.web.app"><strong>Visit on Firebase »</strong></a>
+    <a href="https://html-open-library-angular.web.app"><strong>Visit on Firebase »</strong></a>
     <br /><br />
     <a href="https://github.com/AntonioDS1/html-open-library-angular/issues">Report Bug</a>
     ·
