@@ -1,0 +1,48 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+/* Wrapper centrato */
+.cozy-spinner-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Spinner principale */
+.cozy-spinner {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  /* Beige legnoso di base */
+  border: 3px solid rgba(185, 139, 47, 0.25);
+
+  /* Bordeaux in movimento */
+  border-top: 3px solid var(--accent);
+
+  animation: cozy-rotate 0.8s linear infinite;
+
+  /* Ombra calda */
+  box-shadow:
+    0 0 6px rgba(111, 29, 27, 0.25),
+    0 0 12px rgba(185, 139, 47, 0.15);
+}
+
+/* Testo */
+.cozy-spinner-label {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+
+/* Animazione rotazione */
+@keyframes cozy-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

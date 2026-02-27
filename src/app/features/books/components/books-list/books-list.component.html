@@ -1,0 +1,14 @@
+<ul class="books-grid" *ngIf="books.length">
+
+  <li
+    class="books-grid__item"
+    *ngFor="let b of books"
+  >
+    <app-book-card
+      [book]="b"
+      (toggleDescription)="toggleDescription.emit($event)"
+    >
+    </app-book-card>
+  </li>
+
+</ul>

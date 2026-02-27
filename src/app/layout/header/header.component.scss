@@ -1,0 +1,253 @@
+:host {
+  display: block;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+  background: linear-gradient(180deg, #3e2c23, #2b211a);
+  border-bottom: 3px solid #b98b2f;
+  color: #f7f1e3;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  position: relative;
+  z-index: 1000;
+}
+
+/* container */
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+/* ================= BRAND ================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+
+  font-family: "Crimson Pro", Georgia, serif;
+
+  text-decoration: none;
+  color: #f7f1e3;
+}
+
+.brand__icon {
+  font-size: 1.4rem;
+}
+
+.brand__name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.brand__sub {
+  font-size: .7rem;
+  opacity: .8;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav__link {
+  position: relative;
+
+  text-decoration: none;
+  color: #f7f1e3;
+
+  font-size: .95rem;
+  font-weight: 500;
+
+  transition: color .2s ease;
+}
+
+/* underline animation */
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background: #b98b2f;
+  transition: width .25s ease;
+}
+
+.nav__link:hover {
+  color: #b98b2f;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+/* ================= ACCOUNT ================= */
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+
+  font-size: .9rem;
+
+  padding: .45rem .75rem;
+
+  border: 1px solid rgba(185,139,47,.6);
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition: background .2s ease;
+}
+
+.account:hover {
+  background: rgba(185,139,47,.15);
+}
+
+/* ================= HAMBURGER ================= */
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle__btn {
+  display: none;
+
+  width: 42px;
+  height: 38px;
+
+  border: 1px solid rgba(185,139,47,.6);
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 8px;
+
+  z-index: 1100;
+}
+
+.nav-toggle__btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background: #f7f1e3;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+  .nav {
+    gap: 1.2rem;
+  }
+
+  .nav__link {
+    font-size: .9rem;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 720px) {
+
+  /* hamburger visibile */
+
+  .nav-toggle__btn {
+    display: flex;
+  }
+
+  /* menu dropdown */
+
+  .menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 1rem;
+
+    background: linear-gradient(180deg,#3e2c23,#2b211a);
+
+    border-top: 1px solid rgba(185,139,47,.5);
+
+    z-index: 1050;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+
+    transition: all .25s ease;
+  }
+
+  /* nav verticale */
+
+  .nav {
+    flex-direction: column;
+    gap: .4rem;
+  }
+
+  .nav__link {
+    padding: .65rem .75rem;
+    border-radius: 8px;
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .nav__link:hover {
+    background: rgba(185,139,47,.15);
+    color: #f7f1e3;
+  }
+
+  /* account */
+
+  .account {
+    justify-content: center;
+    margin-top: .5rem;
+  }
+
+  /* apertura menu */
+
+  .nav-toggle:checked ~ .menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+}

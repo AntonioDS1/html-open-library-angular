@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Contenitore principale */
+.search {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================
+   INPUT COZY
+   ========================= */
+
+.search__input {
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+
+  border: 1px solid rgba(111, 29, 27, 0.25);
+
+  background: linear-gradient(
+    180deg,
+    rgba(245, 236, 214, 0.95),
+    rgba(239, 227, 198, 0.95)
+  );
+  color: var(--ink);
+
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1rem;
+
+  transition: all 0.25s ease;
+
+  /* Rimuove il blu default */
+  outline: none;
+
+  &:focus {
+    background: #dcc8ab; // beige più scuro
+    border-color: rgba(111, 29, 27, 0.6);
+
+    box-shadow: 0 0 0 4px rgba(111, 29, 27, 0.15);
+  }
+}
+
+/* Placeholder */
+.search__input::placeholder {
+  color: rgba(43, 33, 26, 0.45);
+  font-style: italic;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.search__btn {
+  white-space: nowrap;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 520px) {
+  .search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search__btn {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FIX AUTOFILL (Chrome / Edge)
+   ========================= */
+
+.search__input:-webkit-autofill,
+.search__input:-webkit-autofill:hover,
+.search__input:-webkit-autofill:focus,
+.search__input:-webkit-autofill:active {
+
+  -webkit-text-fill-color: var(--ink);
+
+  transition: background-color 9999s ease-in-out 0s;
+
+  box-shadow: 0 0 0px 1000px #dcc8ab inset; // stesso colore focus
+}

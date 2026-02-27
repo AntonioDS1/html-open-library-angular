@@ -1,0 +1,95 @@
+:host {
+  display: block;
+  padding: 2rem 1rem;
+}
+
+/* Wrapper principale */
+.home {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Titolo */
+.home__title {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: var(--accent);
+
+  margin-bottom: 1.5rem;
+
+  position: relative;
+}
+
+/* Linea decorativa sotto il titolo */
+.home__title::after {
+  content: '';
+  display: block;
+
+  width: 70px;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    rgba(185, 139, 47, 0.6)
+  );
+
+  margin-top: 0.6rem;
+  border-radius: 4px;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.hero__title {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  background: linear-gradient(
+    90deg,
+    #6f1d1b,
+    #b98b2f
+  );
+
+  /* STANDARD */
+  background-clip: text;
+
+  /* WEBKIT */
+  -webkit-background-clip: text;
+
+  /* necessario per WebKit */
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 0.6rem;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: #6b5c4f;
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+/* Messaggio errore */
+.home__error {
+  margin-top: 1.5rem;
+
+  padding: 0.9rem 1rem;
+
+  border-left: 4px solid #a11;
+
+  background: rgba(255, 235, 235, 0.6);
+
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 0.95rem;
+
+  border-radius: 8px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}

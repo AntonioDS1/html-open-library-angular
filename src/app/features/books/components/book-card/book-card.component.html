@@ -1,0 +1,37 @@
+<div class="card">
+
+  <!-- Copertina -->
+  <div class="cover">
+    <img [src]="book.cover" [alt]="book.title || 'Copertina libro'">
+  </div>
+
+  <!-- Titolo -->
+  <div class="title">
+    {{ book.title }}
+  </div>
+
+  <!-- Autori -->
+  <div class="authors">
+    Autori: {{ book.authors | authorsFormat }}
+  </div>
+
+  <!-- Azioni -->
+  <div class="actions">
+
+    <button
+      class="link-btn"
+      (click)="toggleDescription.emit(book)"
+    >
+      {{ book.showDescription ? 'Nascondi descrizione' : 'Vedi descrizione' }}
+    </button>
+
+  </div>
+
+  <!-- Descrizione -->
+  <app-book-description
+    *ngIf="book.showDescription"
+    [description]="book.description"
+  >
+  </app-book-description>
+
+</div>

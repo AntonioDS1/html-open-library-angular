@@ -1,0 +1,135 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* CARD BASE */
+.card {
+  background: linear-gradient(
+    180deg,
+    #f7f1e3,
+    #efe3c6
+  );
+
+  border-radius: 14px;
+
+
+  padding: 1.4rem 1.4rem 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+
+  box-shadow:
+    0 8px 20px rgba(43, 33, 26, 0.12);
+
+  min-height: 220px;
+}
+
+/* Hover effetto e-commerce */
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 16px 30px rgba(43, 33, 26, 0.18);
+}
+
+/* Finta spina libro laterale */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+
+  background: linear-gradient(
+    180deg,
+    #6f1d1b,
+    #7f1d1d
+  );
+}
+
+/* Cover */
+.cover {
+  height: 500px;
+  width: 300px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  margin-bottom: 0.9rem;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.35s ease;
+}
+
+
+.card:hover .cover img {
+  transform: scale(1.04);
+}
+
+/* Titolo */
+.title {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2b211a;
+  margin-bottom: 0.4rem;
+}
+
+/* Autori */
+.authors {
+  font-size: 0.9rem;
+  color: #5e5045;
+  margin-bottom: 1rem;
+}
+
+/* Actions container */
+.actions {
+  margin-top: auto;
+}
+
+/* Pulsante elegante */
+.link-btn {
+  border: none;
+  background: #6f1d1b;
+  color: white;
+
+  padding: 0.5rem 0.9rem;
+  border-radius: 30px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.link-btn:hover {
+  background: #7f1d1d;
+  transform: translateY(-1px);
+}

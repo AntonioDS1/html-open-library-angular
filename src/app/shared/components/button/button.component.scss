@@ -1,0 +1,42 @@
+:host {
+  display: inline-block;
+}
+
+button {
+  padding: 0.7rem 1.4rem;
+
+  border-radius: 40px;
+  border: none;
+
+  font-family: "Crimson Pro", Georgia, serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    #7f1d1d
+  );
+
+  color: #fff;
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 4px 10px rgba(111, 29, 27, 0.25);
+}
+
+/* Hover */
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 16px rgba(111, 29, 27, 0.35);
+}
+
+/* Disabled */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

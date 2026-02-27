@@ -1,0 +1,38 @@
+<section class="home">
+
+  <div class="hero">
+    <h1 class="hero__title">
+      Cerca libri per categoria
+    </h1>
+    <p class="hero__subtitle">
+      Esplora mondi, generi e storie senza tempo.
+    </p>
+  </div>
+
+  <!-- Search input -->
+  <app-search-input
+    (search)="onSearch($event)">
+  </app-search-input>
+
+  <!-- Loading -->
+  <app-loader
+    *ngIf="loading()"
+    label="Caricamento libri..."
+  >
+  </app-loader>
+
+  <!-- Errore -->
+  <div
+    class="home__error"
+    *ngIf="error() as error"
+  >
+    {{ error }}
+  </div>
+
+  <!-- Lista libri -->
+  <app-books-list
+    [books]="books()"
+    (toggleDescription)="toggleDescription($event)">
+  </app-books-list>
+
+</section>

@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()" class="search">
+
+  <input
+    type="text"
+    name="category"
+    [(ngModel)]="category"
+    placeholder="Es. fantasy, horror, romance..."
+    class="search__input"
+  />
+
+  <app-button
+    type="submit"
+    class="search__btn"
+  >
+    Cerca
+  </app-button>
+
+</form>

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  margin-top: 2.5rem;
+}
+
+/* GRID PRINCIPALE */
+.books-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+
+  /* Responsive automatico */
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+
+  gap: 2rem;
+}
+
+/* Ogni item */
+.books-grid__item {
+  display: flex;
+}
