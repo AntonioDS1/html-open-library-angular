@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://antoniods1.github.io/html-open-library-angular">
-    <img src="public/favicon-32.png" alt="Open Library Angular Logo" width="160">
+    <img src="public/favicon.ico" alt="Open Library Angular Logo" width="160">
   </a>
 
   <h3 align="center">Open Library Angular</h3>
