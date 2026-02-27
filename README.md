@@ -197,25 +197,36 @@ firebase deploy
 
 👉 https://html-open-library-angular.web.app
 
+
 ### 🔹 GitHub Repository
+
 
 👉 https://github.com/AntonioDS1/html-open-library-angular
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ---
 
+
 ## 📬 Contact
 
+
 **Antonio De Siena**
+
 
 GitHub:
 
 👉 https://github.com/AntonioDS1
 
+
 Project Links:
 
 👉 GitHub Repository: https://antoniods1.github.io/html-open-library-angular
+
 👉 Firebase: https://html-open-library-angular.web.app
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
